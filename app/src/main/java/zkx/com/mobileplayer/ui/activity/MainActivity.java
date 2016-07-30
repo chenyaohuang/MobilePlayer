@@ -5,6 +5,7 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.TextView;
 
+import com.nineoldandroids.view.ViewHelper;
 import com.nineoldandroids.view.ViewPropertyAnimator;
 
 import java.util.ArrayList;
@@ -62,9 +63,10 @@ public class MainActivity extends BaseActivity {
 
         //初始化指示器宽度(1,拿到屏幕宽度)
         int screenW = getWindowManager().getDefaultDisplay().getWidth();
-        indicate_line.getLayoutParams().width = screenW / 2;
+        indicate_line.getLayoutParams().width = screenW / fragments.size();
         indicate_line.requestLayout();//重新计算界面大小，并刷新界面
         // (invalidate,不会重新计算界面大小,只会刷新界面)
+
     }
 
     @Override
@@ -85,6 +87,15 @@ public class MainActivity extends BaseActivity {
         @Override
         /** 当touch事件发生时回调此方法 */
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            //偏移位置 = 手指划过屏幕的百分比*指示器宽度
+//            int offsetX = (int) (positionOffset * indicate_line.getWidth());
+            //偏移位置2=手指划过屏幕的像素 /pager个数
+            int offsetX = positionOffsetPixels / fragments.size();
+            //起始位置 = position * 指示器宽度
+            int startX = position * indicate_line.getWidth();
+            //指示器移动的位置 = 起始位置 + 偏移位置
+            int translationX = startX + offsetX;
+            ViewHelper.setTranslationX(indicate_line,translationX);
         }
 
         @Override
