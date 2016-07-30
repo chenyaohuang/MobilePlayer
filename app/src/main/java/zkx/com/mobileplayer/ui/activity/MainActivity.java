@@ -89,7 +89,7 @@ public class MainActivity extends BaseActivity {
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
             //偏移位置 = 手指划过屏幕的百分比*指示器宽度
 //            int offsetX = (int) (positionOffset * indicate_line.getWidth());
-            //偏移位置2=手指划过屏幕的像素 /pager个数
+            //偏移位置2 =手指划过屏幕的像素 /pager个数
             int offsetX = positionOffsetPixels / fragments.size();
             //起始位置 = position * 指示器宽度
             int startX = position * indicate_line.getWidth();
@@ -106,7 +106,7 @@ public class MainActivity extends BaseActivity {
         }
 
         @Override
-        /** 当页面的滑动状态发生变更会回调此方法 */
+        /** 当页面的滑动状态发生变更会回调此方法*/
         public void onPageScrollStateChanged(int state) {
 
         }
