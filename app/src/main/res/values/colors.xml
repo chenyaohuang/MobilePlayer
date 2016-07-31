@@ -6,4 +6,5 @@
     <color name="white">#eeffffff</color>
     <color name="green">#30BC79</color>
     <color name="halfwhite">#66ffffff</color>
+    <color name="list_divider">#44ffffff</color>
 </resources>
