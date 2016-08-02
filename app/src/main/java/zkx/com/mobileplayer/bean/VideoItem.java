@@ -5,10 +5,12 @@ import android.provider.MediaStore.Video.Media;
 
 import com.nineoldandroids.view.ViewHelper;
 
+import java.io.Serializable;
+
 /**
  * Created by zhang on 2016/7/31.
  */
-public class VideoItem {
+public class VideoItem implements Serializable{
     private String title;
     private int duration;
     private int size;
