@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base_bg_0"
+    android:orientation="vertical">
+    <!--顶部-->
+    <include layout="@layout/audiopalyer_top" />
+
+    <!--中间-->
+    <!--layut_weight="1"别人用剩的地方你再用-->
+    <include
+        layout="@layout/audiopalyer_midlle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!--底部-->
+    <include layout="@layout/audiopalyer_bottom" />
+</LinearLayout>

@@ -83,6 +83,32 @@ public class MainActivity extends BaseActivity {
 
     }
 
+    /**
+     * 高亮position选中页面对应的标签，并将其他的变暗
+     */
+    private void updateTabs(int position) {
+        updateTab(position, 0, tv_video);
+        updateTab(position, 1, tv_audio);
+    }
+
+    /**
+     * 判断当前要处理的 tabPosition 是否是选中的 position，并修改tab的高亮状态
+     */
+    private void updateTab(int position, int tabPosition, TextView tab) {
+        int green = getResources().getColor(R.color.green);
+        int halfWhite = getResources().getColor(R.color.halfwhite);
+
+        if (position == tabPosition) {
+            // tab对应的页面被选中
+            tab.setTextColor(green);
+            ViewPropertyAnimator.animate(tab).scaleX(1.2f).scaleY(1.2f);
+        } else {
+            // tab对应的页面没有被选中
+            tab.setTextColor(halfWhite);
+            ViewPropertyAnimator.animate(tab).scaleX(1.0f).scaleY(1.0f);
+        }
+    }
+
     private class OnMainPageChangeListener implements ViewPager.OnPageChangeListener {
         @Override
         /** 当touch事件发生时回调此方法 */
@@ -109,28 +135,6 @@ public class MainActivity extends BaseActivity {
         /** 当页面的滑动状态发生变更会回调此方法*/
         public void onPageScrollStateChanged(int state) {
 
-        }
-    }
-
-    /** 高亮position选中页面对应的标签，并将其他的变暗 */
-    private void updateTabs(int position) {
-        updateTab(position, 0, tv_video);
-        updateTab(position, 1, tv_audio);
-    }
-
-    /** 判断当前要处理的 tabPosition 是否是选中的 position，并修改tab的高亮状态 */
-    private void updateTab(int position, int tabPosition, TextView tab) {
-        int green = getResources().getColor(R.color.green);
-        int halfWhite = getResources().getColor(R.color.halfwhite);
-
-        if (position == tabPosition){
-            // tab对应的页面被选中
-            tab.setTextColor(green);
-            ViewPropertyAnimator.animate(tab).scaleX(1.2f).scaleY(1.2f);
-        }else {
-            // tab对应的页面没有被选中
-            tab.setTextColor(halfWhite);
-            ViewPropertyAnimator.animate(tab).scaleX(1.0f).scaleY(1.0f);
         }
     }
 }

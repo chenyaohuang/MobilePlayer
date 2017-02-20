@@ -1,0 +1,1107 @@
+Index: notificationdemo/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- notificationdemo/build.gradle	(revision )
++++ notificationdemo/build.gradle	(revision )
+@@ -1,26 +0,0 @@
+-apply plugin: 'com.android.application'
+-
+-android {
+-    compileSdkVersion 23
+-    buildToolsVersion "23.0.1"
+-
+-    defaultConfig {
+-        applicationId "zkx.com.notificationdemo"
+-        minSdkVersion 16
+-        targetSdkVersion 23
+-        versionCode 1
+-        versionName "1.0"
+-    }
+-    buildTypes {
+-        release {
+-            minifyEnabled false
+-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+-        }
+-    }
+-}
+-
+-dependencies {
+-    compile fileTree(dir: 'libs', include: ['*.jar'])
+-    testCompile 'junit:junit:4.12'
+-    compile 'com.android.support:appcompat-v7:23.1.1'
+-}
+Index: notificationdemo/src/main/res/values-w820dp/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- notificationdemo/src/main/res/values-w820dp/dimens.xml	(revision )
++++ notificationdemo/src/main/res/values-w820dp/dimens.xml	(revision )
+@@ -1,6 +0,0 @@
+-<resources>
+-    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+-         (such as screen margins) for screens with more than 820dp of available width. This
+-         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
+-    <dimen name="activity_horizontal_margin">64dp</dimen>
+-</resources>
+Index: notificationdemo/src/main/java/zkx/com/notificationdemo/OtherActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- notificationdemo/src/main/java/zkx/com/notificationdemo/OtherActivity.java	(revision )
++++ notificationdemo/src/main/java/zkx/com/notificationdemo/OtherActivity.java	(revision )
+@@ -1,15 +0,0 @@
+-package zkx.com.notificationdemo;
+-
+-import android.support.v7.app.AppCompatActivity;
+-import android.os.Bundle;
+-
+-public class OtherActivity extends AppCompatActivity {
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_other);
+-
+-        getSharedPreferences("", );
+-    }
+-}
+Index: notificationdemo/src/test/java/zkx/com/notificationdemo/ExampleUnitTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- notificationdemo/src/test/java/zkx/com/notificationdemo/ExampleUnitTest.java	(revision )
++++ notificationdemo/src/test/java/zkx/com/notificationdemo/ExampleUnitTest.java	(revision )
+@@ -1,15 +0,0 @@
+-package zkx.com.notificationdemo;
+-
+-import org.junit.Test;
+-
+-import static org.junit.Assert.*;
+-
+-/**
+- * To work on unit tests, switch the Test Artifact in the Build Variants view.
+- */
+-public class ExampleUnitTest {
+-    @Test
+-    public void addition_isCorrect() throws Exception {
+-        assertEquals(4, 2 + 2);
+-    }
+-}
+\ No newline at end of file
+Index: notificationdemo/src/main/res/values/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- notificationdemo/src/main/res/values/dimens.xml	(revision )
++++ notificationdemo/src/main/res/values/dimens.xml	(revision )
+@@ -1,5 +0,0 @@
+-<resources>
+-    <!-- Default screen margins, per the Android Design guidelines. -->
+-    <dimen name="activity_horizontal_margin">16dp</dimen>
+-    <dimen name="activity_vertical_margin">16dp</dimen>
+-</resources>
+Index: notificationdemo/src/main/res/values/styles.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- notificationdemo/src/main/res/values/styles.xml	(revision )
++++ notificationdemo/src/main/res/values/styles.xml	(revision )
+@@ -1,11 +0,0 @@
+-<resources>
+-
+-    <!-- Base application theme. -->
+-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+-        <!-- Customize your theme here. -->
+-        <item name="colorPrimary">@color/colorPrimary</item>
+-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+-        <item name="colorAccent">@color/colorAccent</item>
+-    </style>
+-
+-</resources>
+Index: notificationdemo/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- notificationdemo/src/main/AndroidManifest.xml	(revision )
++++ notificationdemo/src/main/AndroidManifest.xml	(revision )
+@@ -1,19 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+-    package="zkx.com.notificationdemo">
+-
+-    <application
+-        android:icon="@drawable/icon"
+-        android:label="@string/app_name"
+-        android:theme="@style/AppTheme">
+-        <activity android:name=".MainActivity">
+-            <intent-filter>
+-                <action android:name="android.intent.action.MAIN" />
+-
+-                <category android:name="android.intent.category.LAUNCHER" />
+-            </intent-filter>
+-        </activity>
+-        <activity android:name=".OtherActivity"></activity>
+-    </application>
+-
+-</manifest>
+Index: notificationdemo/src/main/res/layout/activity_other.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- notificationdemo/src/main/res/layout/activity_other.xml	(revision )
++++ notificationdemo/src/main/res/layout/activity_other.xml	(revision )
+@@ -1,12 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    android:paddingBottom="@dimen/activity_vertical_margin"
+-    android:paddingLeft="@dimen/activity_horizontal_margin"
+-    android:paddingRight="@dimen/activity_horizontal_margin"
+-    android:paddingTop="@dimen/activity_vertical_margin"
+-    tools:context="zkx.com.notificationdemo.OtherActivity">
+-
+-</RelativeLayout>
+Index: fastransfer/src/main/java/com/guohui/fasttransfer/utils/ImageLoader.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- fastransfer/src/main/java/com/guohui/fasttransfer/utils/ImageLoader.java	(revision )
++++ fastransfer/src/main/java/com/guohui/fasttransfer/utils/ImageLoader.java	(revision )
+@@ -1,142 +0,0 @@
+-package com.guohui.fasttransfer.utils;
+-
+-/**
+- * Created by zhang on 2016/10/14.
+- */
+-
+-import android.graphics.Bitmap;
+-import android.media.MediaMetadataRetriever;
+-import android.media.ThumbnailUtils;
+-import android.os.AsyncTask;
+-import android.os.Handler;
+-import android.os.Message;
+-import android.util.LruCache;
+-import android.widget.ImageView;
+-
+-/**
+- * Created by zhang on 2016/11/27.
+- */
+-public class ImageLoader {
+-
+-    private ImageView mImageView;
+-    private String mUrl;
+-
+-    private Handler mHandler = new Handler() {
+-        @Override
+-        public void handleMessage(Message msg) {
+-            super.handleMessage(msg);
+-            if (mImageView.getTag().equals(mUrl)) {
+-                mImageView.setImageBitmap((Bitmap) msg.obj);
+-            }
+-
+-        }
+-    };
+-    //创建Cache，并指定它的键值对类型
+-    private LruCache<String, Bitmap> mCaches;
+-
+-
+-    public ImageLoader() {
+-        //获取最大可用内存
+-        int maxMemory = (int) Runtime.getRuntime().maxMemory();
+-        int cacheSize = maxMemory / 4;
+-        mCaches = new LruCache<String, Bitmap>(cacheSize) {
+-
+-            //必须重写sizeof方法，它在每次存入缓存的时候调用，告诉我们的缓存，
+-            //告诉我们的系统，当前存入的对象到底有多大
+-            @Override
+-            protected int sizeOf(String key, Bitmap value) {
+-                //在每次存入缓存的时候调用
+-                return value.getByteCount();//返回实际的大小
+-            }
+-        };
+-    }
+-
+-    /**
+-     * @param imageView
+-     * @param url
+-     */
+-    public void showImageByThread(ImageView imageView, final String url) {
+-        mImageView = imageView;
+-        mUrl = url;
+-        new Thread() {
+-            @Override
+-            public void run() {
+-                super.run();
+-                MediaMetadataRetriever media = new MediaMetadataRetriever();
+-                media.setDataSource(url);
+-                Bitmap bitmap = media.getFrameAtTime(3000);
+-                bitmap = ThumbnailUtils.extractThumbnail(bitmap, 100, 100);
+-                Message message = Message.obtain();
+-                message.obj = bitmap;
+-                mHandler.sendMessage(message);
+-            }
+-        }.start();
+-
+-    }
+-
+-    //增加到缓存
+-    public void addBitmapToCache(String url, Bitmap bitmap) {
+-        if (getBitmapFromCache(url) == null) {
+-            mCaches.put(url, bitmap);
+-        }
+-    }
+-
+-    //从缓存中获取数据
+-    public Bitmap getBitmapFromCache(String url) {
+-        return mCaches.get(url);
+-    }
+-
+-
+-    public void showImageByAsyncTask(ImageView imageView, String url) {
+-        //从缓存中取出对应的图片
+-        Bitmap bitmap = getBitmapFromCache(url);
+-        //如果缓存最中没有，那么必须去网络下载
+-        if (bitmap == null) {
+-            new VideoAsyncTask(imageView, url).execute(url);
+-        } else {
+-            //有,则从直接缓存中获取，直接设置。
+-            // 这样不用每次都从网络中下载，直接使用网络中的数据
+-            //这就是典型的以内存换效率，节省流量
+-            imageView.setImageBitmap(bitmap);
+-        }
+-
+-    }
+-
+-    private class VideoAsyncTask extends AsyncTask<String, Void, Bitmap> {
+-        private ImageView mImageView;
+-        private String mUrl;
+-
+-        public VideoAsyncTask(ImageView imageView, String url) {
+-            mImageView = imageView;
+-            mUrl = url;
+-        }
+-
+-        @Override
+-        protected Bitmap doInBackground(String... params) {
+-            String url = params[0];
+-            //从网络上获取图片
+-//            Bitmap bitmap = getBitmapFromURL(params[0]);
+-            MediaMetadataRetriever media = new MediaMetadataRetriever();
+-            media.setDataSource(url);
+-            Bitmap bitmap = media.getFrameAtTime();
+-            bitmap = ThumbnailUtils.extractThumbnail(bitmap, 100, 100);
+-
+-            if (bitmap != null) {
+-                //将不在缓存中的图片加入缓存
+-                addBitmapToCache(url, bitmap);
+-            }
+-            return bitmap;
+-        }
+-
+-        @Override
+-        protected void onPostExecute(Bitmap bitmap) {
+-            super.onPostExecute(bitmap);
+-            if (mImageView.getTag().equals(mUrl)) {
+-                mImageView.setImageBitmap(bitmap);
+-            }
+-
+-        }
+-    }
+-
+-
+-}
+Index: notificationdemo/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- notificationdemo/src/main/res/layout/activity_main.xml	(revision )
++++ notificationdemo/src/main/res/layout/activity_main.xml	(revision )
+@@ -1,23 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    android:orientation="horizontal"
+-    tools:context="zkx.com.notificationdemo.MainActivity">
+-
+-    <Button
+-        android:id="@+id/show"
+-        android:layout_width="0dp"
+-        android:layout_height="wrap_content"
+-        android:layout_weight="1"
+-        android:onClick="show"
+-        android:text="显示通知" />
+-
+-    <Button
+-        android:layout_width="0dp"
+-        android:layout_height="wrap_content"
+-        android:layout_weight="1"
+-        android:onClick="cancel"
+-        android:text="取消通知" />
+-</LinearLayout>
+Index: notificationdemo/src/main/res/layout/audio_notify.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- notificationdemo/src/main/res/layout/audio_notify.xml	(revision )
++++ notificationdemo/src/main/res/layout/audio_notify.xml	(revision )
+@@ -1,57 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:id="@+id/audio_notify_layout"
+-    android:layout_width="match_parent"
+-    android:layout_height="wrap_content"
+-    android:gravity="center_vertical"
+-    android:orientation="horizontal"
+-    android:padding="6dp">
+-    <!--icon-->
+-    <ImageView
+-        android:layout_width="60dp"
+-        android:layout_height="60dp"
+-        android:src="@drawable/icon" />
+-
+-    <!--歌曲信息-->
+-    <LinearLayout
+-        android:layout_width="0dp"
+-        android:layout_height="wrap_content"
+-        android:layout_weight="1"
+-        android:orientation="vertical">
+-
+-        <TextView
+-            android:id="@+id/audio_notify_tv_title"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:ellipsize="marquee"
+-            android:singleLine="true"
+-            android:text="歌曲名"
+-            android:textColor="@color/white"
+-            android:textSize="18sp" />
+-
+-        <TextView
+-            android:id="@+id/audio_notify_tv_aritist"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_marginTop="4dp"
+-            android:singleLine="true"
+-            android:text="歌手名"
+-            android:textColor="@color/halfwhite"
+-            android:textSize="16sp" />
+-
+-    </LinearLayout>
+-    <!--上一曲-->
+-    <ImageView
+-        android:id="@+id/audio_notify_iv_pre"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginLeft="10dp"
+-        android:layout_marginRight="10dp"
+-        android:src="@drawable/icon_notification_pre" />
+-    <!--下一曲-->
+-    <ImageView
+-        android:id="@+id/audio_notify_iv_next"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:src="@drawable/icon_notification_next" />
+-</LinearLayout>
+\ No newline at end of file
+Index: notificationdemo/src/androidTest/java/zkx/com/notificationdemo/ApplicationTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- notificationdemo/src/androidTest/java/zkx/com/notificationdemo/ApplicationTest.java	(revision )
++++ notificationdemo/src/androidTest/java/zkx/com/notificationdemo/ApplicationTest.java	(revision )
+@@ -1,13 +0,0 @@
+-package zkx.com.notificationdemo;
+-
+-import android.app.Application;
+-import android.test.ApplicationTestCase;
+-
+-/**
+- * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>
+- */
+-public class ApplicationTest extends ApplicationTestCase<Application> {
+-    public ApplicationTest() {
+-        super(Application.class);
+-    }
+-}
+\ No newline at end of file
+Index: notificationdemo/proguard-rules.pro
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- notificationdemo/proguard-rules.pro	(revision )
++++ notificationdemo/proguard-rules.pro	(revision )
+@@ -1,17 +0,0 @@
+-# Add project specific ProGuard rules here.
+-# By default, the flags in this file are appended to flags specified
+-# in E:\Android\sdk/tools/proguard/proguard-android.txt
+-# You can edit the include path and order by changing the proguardFiles
+-# directive in build.gradle.
+-#
+-# For more details, see
+-#   http://developer.android.com/guide/developing/tools/proguard.html
+-
+-# Add any project specific keep options here:
+-
+-# If your project uses WebView with JS, uncomment the following
+-# and specify the fully qualified class name to the JavaScript interface
+-# class:
+-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+-#   public *;
+-#}
+Index: notificationdemo/src/main/java/zkx/com/notificationdemo/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- notificationdemo/src/main/java/zkx/com/notificationdemo/MainActivity.java	(revision )
++++ notificationdemo/src/main/java/zkx/com/notificationdemo/MainActivity.java	(revision )
+@@ -1,152 +0,0 @@
+-package zkx.com.notificationdemo;
+-
+-import android.annotation.TargetApi;
+-import android.app.Activity;
+-import android.app.Notification;
+-import android.app.NotificationManager;
+-import android.app.PendingIntent;
+-import android.content.Intent;
+-import android.os.Build;
+-import android.os.Bundle;
+-import android.view.View;
+-import android.widget.Button;
+-import android.widget.RemoteViews;
+-
+-
+-public class MainActivity extends Activity {
+-
+-    static final int NOTIFICATION_ID = 0x123;
+-    NotificationManager nm;
+-    private Button show;
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_main);
+-        nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+-//        initView();
+-    }
+-
+-//    private void initView() {
+-//        show = (Button) findViewById(R.id.show);
+-//        show.setOnClickListener(new View.OnClickListener() {
+-//            @Override
+-//            public void onClick(View v) {
+-//                show();
+-//            }
+-//        });
+-//    }
+-
+-
+-    public void show(View view) {
+-        System.out.println("show开始了");
+-
+-//        showNotification();
+-        Intent intent = new Intent(MainActivity.this, OtherActivity.class);
+-        PendingIntent pi = PendingIntent.getActivity(MainActivity.this, 0, intent, 0);
+-        Notification notify = new Notification.Builder(this)
+-                .setAutoCancel(true)
+-                .setTicker(null)
+-                .setSmallIcon(R.drawable.icon)
+-                .setContentTitle("搁浅")
+-                .setContentText("周杰伦")
+-                .setWhen(System.currentTimeMillis())
+-                .setContentIntent(pi)
+-                .build();
+-        nm.notify(NOTIFICATION_ID, notify);
+-        System.out.println("show玩了");
+-    }
+-
+-    public void cancel(View view) {
+-//        cancleNotification();
+-        nm.cancel(NOTIFICATION_ID);
+-    }
+-
+-
+-    /**
+-     * 显示通知
+-     */
+-    private void showNotification() {
+-        // 生成Notification对象
+-        Notification notification = getCustomNotificationNewApi();
+-
+-        // 显示通知
+-        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+-        notificationManager.notify(0, notification);
+-    }
+-
+-
+-    /**
+-     * 使用新API生成一个自定义布局的通知
+-     */
+-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+-    private Notification getCustomNotificationNewApi() {
+-        Notification.Builder builder = new Notification.Builder(this);
+-        builder.setSmallIcon(R.drawable.icon);
+-        builder.setTicker("正在播放： beijingbeijing");
+-        builder.setContent(getRemoteView());
+-        builder.setOngoing(true);
+-        return builder.getNotification();
+-    }
+-
+-
+-    private RemoteViews getRemoteView() {
+-        RemoteViews remoteViews = new RemoteViews(getPackageName(), R.layout.audio_notify);
+-
+-        //填充文字
+-        remoteViews.setTextViewText(R.id.audio_notify_tv_title, "ffffrgerg");
+-        remoteViews.setTextViewText(R.id.audio_notify_tv_aritist, "张可新");
+-
+-        //设置点击事件
+-        remoteViews.setOnClickPendingIntent(R.id.audio_notify_iv_pre, getPreIntent());
+-        //requsetCode都是0,所以覆盖了上一曲的Intent(PendingIntent.FLAG_UPDATE_CURRENT,
+-        // 使用同一个PendingIntent,覆盖Intent对象)
+-        remoteViews.setOnClickPendingIntent(R.id.audio_notify_iv_next, getNextIntent());
+-        remoteViews.setOnClickPendingIntent(R.id.audio_notify_layout, getContentIntent());
+-
+-        return remoteViews;
+-    }
+-
+-    /**
+-     * 点击通知空白部分的响应
+-     *
+-     * @return
+-     */
+-    private PendingIntent getContentIntent() {
+-        Intent intent = new Intent(this, MainActivity.class);
+-        intent.putExtra("msg", "我是从通知栏启动的!");
+-        return PendingIntent.getActivity(this, 2, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+-    }
+-
+-    /**
+-     * 取消通知
+-     */
+-    private void cancleNotification() {
+-        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+-        notificationManager.cancel(0);
+-    }
+-
+-    /**
+-     * 点击上一曲的响应
+-     *
+-     * @return
+-     */
+-    public PendingIntent getPreIntent() {
+-        Intent intent = new Intent(this, MainActivity.class);
+-        intent.putExtra("msg", "我是上一曲!");
+-        return PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+-    }
+-
+-    /**
+-     * 点击下一曲的响应
+-     *
+-     * @return
+-     */
+-    public PendingIntent getNextIntent() {
+-        Intent intent = new Intent(this, MainActivity.class);
+-        intent.putExtra("msg", "我是下一曲!");
+-        return PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+-    }
+-
+-
+-}
+Index: notificationdemo/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- notificationdemo/.gitignore	(revision )
++++ notificationdemo/.gitignore	(revision )
+@@ -1,1 +0,0 @@
+-/build
+Index: notificationdemo/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- notificationdemo/src/main/res/values/strings.xml	(revision )
++++ notificationdemo/src/main/res/values/strings.xml	(revision )
+@@ -1,3 +0,0 @@
+-<resources>
+-    <string name="app_name">NotificationDemo</string>
+-</resources>
+Index: notificationdemo/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- notificationdemo/src/main/res/values/colors.xml	(revision )
++++ notificationdemo/src/main/res/values/colors.xml	(revision )
+@@ -1,10 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<resources>
+-    <color name="colorPrimary">#3F51B5</color>
+-    <color name="colorPrimaryDark">#303F9F</color>
+-    <color name="colorAccent">#FF4081</color>
+-    <color name="white">#eeffffff</color>
+-    <color name="green">#30BC79</color>
+-    <color name="halfwhite">#66ffffff</color>
+-    <color name="list_divider">#44ffffff</color>
+-</resources>
+Index: app/src/main/java/zkx/com/mobileplayer/ui/activity/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/zkx/com/mobileplayer/ui/activity/MainActivity.java	(revision )
++++ app/src/main/java/zkx/com/mobileplayer/ui/activity/MainActivity.java	(date 1478678372000)
+@@ -10,6 +10,7 @@
+ 
+ import java.util.ArrayList;
+ import java.util.List;
++import java.util.TimerTask;
+ 
+ import zkx.com.mobileplayer.R;
+ import zkx.com.mobileplayer.adapter.MainPagerAdapter;
+Index: app/src/main/java/zkx/com/mobileplayer/ui/activity/VideoPlayerActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/zkx/com/mobileplayer/ui/activity/VideoPlayerActivity.java	(revision )
++++ app/src/main/java/zkx/com/mobileplayer/ui/activity/VideoPlayerActivity.java	(date 1478678372000)
+@@ -78,7 +78,7 @@
+             iv_pause.setImageResource(R.drawable.video_pause_seletor);
+         }else{
+             //暂停
+-            iv_pause.setImageResource(R.drawable.video_paly_seletcor);
++            iv_pause.setImageResource(R.drawable.video_paly_seletor);
+         }
+     }
+ 
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(revision )
++++ .idea/gradle.xml	(date 1478678372000)
+@@ -11,11 +11,6 @@
+           <set>
+             <option value="$PROJECT_DIR$" />
+             <option value="$PROJECT_DIR$/app" />
+-            <option value="$PROJECT_DIR$/cutVideoFrame" />
+-            <option value="$PROJECT_DIR$/fastransfer" />
+-            <option value="$PROJECT_DIR$/netvideosender" />
+-            <option value="$PROJECT_DIR$/notificationdemo" />
+-            <option value="$PROJECT_DIR$/vitamio" />
+           </set>
+         </option>
+       </GradleProjectSettings>
+\ No newline at end of file
+Index: app/src/main/java/zkx/com/mobileplayer/adapter/VideoListAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/zkx/com/mobileplayer/adapter/VideoListAdapter.java	(revision )
++++ app/src/main/java/zkx/com/mobileplayer/adapter/VideoListAdapter.java	(date 1478678372000)
+@@ -12,7 +12,6 @@
+ import android.text.format.Formatter;
+ import zkx.com.mobileplayer.R;
+ import zkx.com.mobileplayer.bean.VideoItem;
+-import zkx.com.mobileplayer.util.ImageLoader;
+ import zkx.com.mobileplayer.util.StringUtils;
+ 
+ 
+@@ -20,7 +19,7 @@
+  * Created by zhang on 2016/7/31.
+  */
+ public class VideoListAdapter extends CursorAdapter {
+-    private ImageLoader mImageLoader;
++
+     private Context context;
+     /**
+      * 视频链接的数据
+@@ -29,18 +28,15 @@
+ 
+     public VideoListAdapter(Context context, Cursor c) {
+         super(context, c);
+-        mImageLoader = new ImageLoader();
+ 
+     }
+ 
+     public VideoListAdapter(Context context, Cursor c, int flags) {
+         super(context, c, flags);
+-        mImageLoader = new ImageLoader();
+     }
+ 
+     public VideoListAdapter(Context context, Cursor c, boolean autoRequery) {
+         super(context, c, autoRequery);
+-        mImageLoader = new ImageLoader();
+     }
+ 
+ 
+@@ -72,11 +68,6 @@
+ //        mBitmapUtils.display(view,path);
+ //        VideoItem videoItem = (VideoItem) list.get(cursor.getPosition());
+ 
+-        holder.iv_icon_video.setImageResource(R.drawable.video_default_icon);
+-        String url = videoItem.getPath();
+-        holder.iv_icon_video.setTag(url);
+-//        new ImageLoader().showImageByThread(holder.iv_icon_video, url);
+-        mImageLoader.showImageByAsyncTask(holder.iv_icon_video, url);
+         holder.tv_title.setText(videoItem.getTitle());
+         holder.tv_duration.setText(StringUtils.formatDuration(videoItem.getDuration()));
+         holder.tv_size.setText(Formatter.formatFileSize(context, videoItem.getSize()));
+@@ -89,7 +80,6 @@
+         ImageView iv_icon_video;
+ 
+         public ViewHolder(View root) {
+-
+             tv_title = (TextView) root.findViewById(R.id.main_video_item_tv_title);
+             tv_duration = (TextView) root.findViewById(R.id.main_video_item_tv_duration);
+             tv_size = (TextView) root.findViewById(R.id.main_video_item_tv_size);
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision )
++++ app/src/main/AndroidManifest.xml	(date 1478678372000)
+@@ -23,9 +23,9 @@
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+         </activity>
+-
+         <activity android:name=".ui.activity.MainActivity" />
+ 
++
+         <activity
+             android:name=".ui.activity.VideoPlayerActivity"
+             android:screenOrientation="landscape"
+@@ -58,7 +58,6 @@
+                 <data android:mimeType="video/3gpp2" />
+             </intent-filter>
+         </activity>
+-
+         <!--landsacpe:限制此页面横屏显示-->
+         <!--portrait:限制此页面竖屏显示-->
+         <activity
+Index: app/src/main/java/zkx/com/mobileplayer/ui/fragment/VideoListFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/zkx/com/mobileplayer/ui/fragment/VideoListFragment.java	(revision )
++++ app/src/main/java/zkx/com/mobileplayer/ui/fragment/VideoListFragment.java	(date 1478678372000)
+@@ -5,17 +5,22 @@
+ import android.content.Intent;
+ import android.database.Cursor;
+ import android.provider.MediaStore.Video.Media;
++import android.provider.SyncStateContract;
++import android.util.Log;
+ import android.view.View;
++import android.widget.AbsListView;
+ import android.widget.AdapterView;
++import android.widget.ImageView;
+ import android.widget.ListView;
+ 
+ import java.util.ArrayList;
++import java.util.HashMap;
+ 
+-
+ import zkx.com.mobileplayer.R;
+ import zkx.com.mobileplayer.adapter.VideoListAdapter;
+ import zkx.com.mobileplayer.bean.VideoItem;
+ import zkx.com.mobileplayer.db.MobileAsyncQueryHandler;
++import zkx.com.mobileplayer.ui.activity.VideoPlayerActivity;
+ import zkx.com.mobileplayer.ui.activity.VitamioPlayerActivity;
+ 
+ /**
+@@ -34,7 +39,6 @@
+     @Override
+     public void initView() {
+         listView = (ListView) findViewById(R.id.simple_listview);
+-//        new NewAsyncTask().execute();
+     }
+ 
+     @Override
+Index: app/src/main/res/layout/main_video_list_item.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/main_video_list_item.xml	(revision )
++++ app/src/main/res/layout/main_video_list_item.xml	(date 1478678372000)
+@@ -58,13 +58,13 @@
+ 
+     </LinearLayout>
+ 
+-    <!-- <CheckBox
++    <CheckBox
+-         android:id="@+id/cb_select_video"
+-         android:layout_width="30dp"
+-         android:layout_height="25dp"
+-         android:layout_gravity="center"
+-         android:layout_marginRight="15dp"
++        android:id="@+id/cb_select_video"
++        android:layout_width="30dp"
++        android:layout_height="25dp"
++        android:layout_gravity="center"
++        android:layout_marginRight="15dp"
+-         android:focusable="false" />-->
++        android:focusable="false" />
+     <!--文件大小-->
+     <!--<TextView-->
+     <!--android:id="@+id/main_video_item_tv_size"-->
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(revision )
++++ .idea/modules.xml	(date 1478678372000)
+@@ -4,11 +4,6 @@
+     <modules>
+       <module fileurl="file://$PROJECT_DIR$/MobilePlayer.iml" filepath="$PROJECT_DIR$/MobilePlayer.iml" />
+       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+-      <module fileurl="file://$PROJECT_DIR$/cutVideoFrame/cutVideoFrame.iml" filepath="$PROJECT_DIR$/cutVideoFrame/cutVideoFrame.iml" />
+-      <module fileurl="file://$PROJECT_DIR$/fastransfer/fastransfer.iml" filepath="$PROJECT_DIR$/fastransfer/fastransfer.iml" />
+-      <module fileurl="file://$PROJECT_DIR$/netvideosender/netvideosender.iml" filepath="$PROJECT_DIR$/netvideosender/netvideosender.iml" />
+-      <module fileurl="file://$PROJECT_DIR$/notificationdemo/notificationdemo.iml" filepath="$PROJECT_DIR$/notificationdemo/notificationdemo.iml" />
+-      <module fileurl="file://$PROJECT_DIR$/vitamio/vitamio.iml" filepath="$PROJECT_DIR$/vitamio/vitamio.iml" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file
+Index: app/src/main/res/layout/main_audio_list_item.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/main_audio_list_item.xml	(revision )
++++ app/src/main/res/layout/main_audio_list_item.xml	(date 1478678372000)
+@@ -46,13 +46,13 @@
+ 
+     </LinearLayout>
+ 
+-    <!--<CheckBox
++    <CheckBox
+         android:id="@+id/cb_select_video"
+         android:layout_width="30dp"
+         android:layout_height="25dp"
+         android:layout_gravity="center"
+         android:layout_marginRight="15dp"
+-        android:focusable="false" />-->
++        android:focusable="false" />
+     <!--文件大小-->
+     <!--<TextView-->
+     <!--android:id="@+id/main_video_item_tv_size"-->
+Index: app/src/main/java/zkx/com/mobileplayer/util/ImageLoader.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/zkx/com/mobileplayer/util/ImageLoader.java	(revision )
++++ app/src/main/java/zkx/com/mobileplayer/util/ImageLoader.java	(date 1478678372000)
+@@ -3,141 +3,5 @@
+ /**
+  * Created by zhang on 2016/10/14.
+  */
+-
+-import android.graphics.Bitmap;
+-import android.media.MediaMetadataRetriever;
+-import android.media.ThumbnailUtils;
+-import android.os.AsyncTask;
+-import android.os.Handler;
+-import android.os.Message;
+-import android.util.LruCache;
+-import android.widget.ImageView;
+-
+-
+-/**
+- * Created by zhang on 2016/11/27.
+- */
+ public class ImageLoader {
+-
+-
+-    private ImageView mImageView;
+-    private String mUrl;
+-    private Handler mHandler = new Handler() {
+-        @Override
+-        public void handleMessage(Message msg) {
+-            super.handleMessage(msg);
+-            if (mImageView.getTag().equals(mUrl)) {
+-                mImageView.setImageBitmap((Bitmap) msg.obj);
+-            }
+-
+-        }
+-    };
+-    //创建Cache，并指定它的键值对类型
+-    private LruCache<String, Bitmap> mCaches;
+-
+-    public ImageLoader() {
+-        //获取最大可用内存
+-        int maxMemory = (int) Runtime.getRuntime().maxMemory();
+-        int cacheSize = maxMemory / 4;
+-        mCaches = new LruCache<String, Bitmap>(cacheSize) {
+-
+-            //必须重写sizeof方法，它在每次存入缓存的时候调用，告诉我们的缓存，
+-            //告诉我们的系统，当前存入的对象到底有多大
+-            @Override
+-            protected int sizeOf(String key, Bitmap value) {
+-                //在每次存入缓存的时候调用
+-                return value.getByteCount();//返回实际的大小
+-            }
+-        };
+-    }
+-
+-    /**
+-     * @param imageView
+-     * @param url
+-     */
+-    public void showImageByThread(ImageView imageView, final String url) {
+-        mImageView = imageView;
+-        mUrl = url;
+-        new Thread() {
+-            @Override
+-            public void run() {
+-                super.run();
+-                MediaMetadataRetriever media = new MediaMetadataRetriever();
+-                media.setDataSource(url);
+-                Bitmap bitmap = media.getFrameAtTime(3000);
+-                bitmap = ThumbnailUtils.extractThumbnail(bitmap, 100, 100);
+-                Message message = Message.obtain();
+-                message.obj = bitmap;
+-                mHandler.sendMessage(message);
+-            }
+-        }.start();
+-
+-    }
+-
+-    //增加到缓存
+-    public void addBitmapToCache(String url, Bitmap bitmap) {
+-        if (getBitmapFromCache(url) == null) {
+-            mCaches.put(url, bitmap);
+-        }
+-    }
+-
+-    //从缓存中获取数据
+-    public Bitmap getBitmapFromCache(String url) {
+-        return mCaches.get(url);
+-    }
+-
+-
+-    public void showImageByAsyncTask(ImageView imageView, String url) {
+-        //从缓存中取出对应的图片
+-        Bitmap bitmap = getBitmapFromCache(url);
+-        //如果缓存最中没有，那么必须去网络下载
+-        if (bitmap == null) {
+-            new VideoAsyncTask(imageView, url).execute(url);
+-        } else {
+-            //有,则从直接缓存中获取，直接设置。
+-            // 这样不用每次都从网络中下载，直接使用网络中的数据
+-            //这就是典型的以内存换效率，节省流量
+-            imageView.setImageBitmap(bitmap);
+-        }
+-
+-    }
+-
+-    private class VideoAsyncTask extends AsyncTask<String, Void, Bitmap> {
+-        private ImageView mImageView;
+-        private String mUrl;
+-
+-        public VideoAsyncTask(ImageView imageView, String url) {
+-            mImageView = imageView;
+-            mUrl = url;
+-        }
+-
+-        @Override
+-        protected Bitmap doInBackground(String... params) {
+-            String url = params[0];
+-            //从网络上获取图片
+-//            Bitmap bitmap = getBitmapFromURL(params[0]);
+-            MediaMetadataRetriever media = new MediaMetadataRetriever();
+-            media.setDataSource(url);
+-            Bitmap bitmap = media.getFrameAtTime();
+-            bitmap = ThumbnailUtils.extractThumbnail(bitmap, 100, 100);
+-
+-            if (bitmap != null) {
+-                //将不在缓存中的图片加入缓存
+-                addBitmapToCache(url, bitmap);
+-            }
+-            return bitmap;
+-        }
+-
+-        @Override
+-        protected void onPostExecute(Bitmap bitmap) {
+-            super.onPostExecute(bitmap);
+-            if (mImageView.getTag().equals(mUrl)) {
+-                mImageView.setImageBitmap(bitmap);
+-            }
+-
+-        }
+-    }
+-
+-
+-
+ }
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision )
++++ .idea/misc.xml	(date 1478678372000)
+@@ -37,7 +37,7 @@
+     <ConfirmationsSetting value="0" id="Add" />
+     <ConfirmationsSetting value="0" id="Remove" />
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+\ No newline at end of file
+Index: settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- settings.gradle	(revision )
++++ settings.gradle	(date 1478678372000)
+@@ -1,1 +1,1 @@
+-include ':app', ':netvideosender', ':fastransfer', ':vitamio', ':cutVideoFrame', ':notificationdemo'
++include ':app'
+Index: app/src/main/java/zkx/com/mobileplayer/bean/VideoItem.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/zkx/com/mobileplayer/bean/VideoItem.java	(revision )
++++ app/src/main/java/zkx/com/mobileplayer/bean/VideoItem.java	(date 1478678372000)
+@@ -20,7 +20,6 @@
+     private int size;
+     private String path;
+ 
+-
+     /**
+      * 从cursor生成一个VideoItem对象
+      */
